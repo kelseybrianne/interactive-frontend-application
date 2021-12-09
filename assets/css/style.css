@@ -1,0 +1,42 @@
+#bg-pic {
+    height: 100vh;
+    background-image: url("../images/transparent-img.jpg");
+    background-size: cover;
+    /* opacity: 50%; */
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-menu, .navbar-burger, .navbar-end a {
+    @include mobile {
+        background-color: transparent;
+    }
+}
+
+.title-custom {
+    margin-top: 20vh;
+}
+
+.title {
+    font-size: 5rem;
+    color: rgb(69, 69, 69);
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+.bulma-overlay-mixin {
+    @include overlay(1.5rem);
+    background-color: white;
+    border-radius: 0.25em;
+    color: white;
+    opacity: 0.8;
+    padding: 2em;
+  }
+
+main {
+    height: 70vh;
+}
