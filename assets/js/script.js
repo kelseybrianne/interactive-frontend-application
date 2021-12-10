@@ -11,3 +11,13 @@ $(document).ready(function() {
   
     });
   });
+
+
+  $("#on-hover").mouseenter( function() {
+        $("#toggle").addClass("box-area");
+        console.log("mouse enter");
+  })
+  $("#on-hover").mouseleave( function() {
+        $("#toggle").removeClass("box-area");
+        console.log("mouse gone");
+  })
