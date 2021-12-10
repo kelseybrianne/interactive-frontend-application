@@ -38,11 +38,15 @@ h1 {
   }
 
 main {
-    height: 70vh;
+    height: 60vh;
 }
 
 .custom-column{
     background-color: blue;
+}
+
+.text {
+    width: 60ch;
 }
 
 .wrapper {
@@ -54,23 +58,41 @@ main {
 }
 
 
-.box-area {
+.cube-up {
     position: relative;
     transform-style: preserve-3d;
-    animation-name: rotate;
+    animation-name: rotate-up;
     animation-duration: .2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-
-    
+    animation-iteration-count: 1; 
 }
-@keyframes rotate {
+
+.cube-down {
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotate-down;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; 
+}
+
+@keyframes rotate-up {
     0%{
         transform: rotate3d(0,0,0,0);
     }
     100%{
         transform: rotate3d(1,0,0,90deg);
+    }
+}
+
+@keyframes rotate-down {
+    0%{
+        transform: rotate3d(1,0,0,90deg);
+    }
+    100%{
+        transform: rotate3d(0,0,0,0);
     }
 }
 

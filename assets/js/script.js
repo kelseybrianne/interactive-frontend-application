@@ -14,10 +14,12 @@ $(document).ready(function() {
 
 
   $("#on-hover").mouseenter( function() {
-        $("#toggle").addClass("box-area");
+        $("#toggle").removeClass("cube-down");
+        $("#toggle").addClass("cube-up");
         console.log("mouse enter");
   })
   $("#on-hover").mouseleave( function() {
-        $("#toggle").removeClass("box-area");
+        $("#toggle").removeClass("cube-up");
+        $("#toggle").addClass("cube-down");
         console.log("mouse gone");
   })
