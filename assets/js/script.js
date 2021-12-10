@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
   });
 
-
+  // Cube animation on "take me to the challenge" button
   $("#on-hover").mouseenter( function() {
         $("#toggle").removeClass("cube-down");
         $("#toggle").addClass("cube-up");
