@@ -6,19 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self-Exploration Journal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
 </head>
 <body>
     <!-- Use moment to add current date to Journal entry -->
-    <!-- Text Inputs -->
-    <input class="input is-primary" type="text" placeholder="Type title here...">
-    <div class="field">
-        <div class="control">
-          <textarea class="textarea is-medium is-primary" placeholder="Journal entry here..."></textarea>
-        </div>
-    </div>
+    
+    <div class="tile is-parent">
+        <article class="tile is-child notification is-primary">
+          <h1 class="subtitle">Congratulations on completing your daily activity!</h1>
+          <h2 class="subtitle">You've taken another great step on your journey in self-exploration. Use the space below to reflect on what you've learned about yourself today and how you can use this knowledge to live your best life (or whatever):</h2>
+          <p class="title">Date: <input type="text" id="datepicker"></p>
+          <div class="content">
+            <div class="field">
+                <div class="control">
+                  <textarea class="textarea is-medium is-primary" placeholder="Write your journal entry here..."></textarea>
+                </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    
+  
 </body>
 </html>
-
-<!-- Congratulations on completing your daily activity! 
-    You've taken another great step on your journey in self-exploration. 
-    Use the space below to reflect on what you've learned about yourself today and how you can use this knowledge to live your best life (or whatever): -->
