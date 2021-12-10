@@ -38,9 +38,78 @@ h1 {
   }
 
 main {
-    height: 70vh;
+    height: 60vh;
 }
 
 .custom-column{
-    background-color: white;
+    background-color: blue;
+}
+
+.text {
+    width: 60ch;
+}
+
+.wrapper {
+    /* background-color: black;
+    position: absolute;
+    top: 80%;
+    left: 50%; */
+    /* perspective: none; */
+}
+
+
+.cube-up {
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotate-up;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; 
+}
+
+.cube-down {
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotate-down;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; 
+}
+
+@keyframes rotate-up {
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+    100%{
+        transform: rotate3d(1,0,0,90deg);
+    }
+}
+
+@keyframes rotate-down {
+    0%{
+        transform: rotate3d(1,0,0,90deg);
+    }
+    100%{
+        transform: rotate3d(0,0,0,0);
+    }
+}
+
+.box{
+    position: absolute;
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+}
+
+.box-front {
+    transform: translateX(-150px) translateY(-20px) translateZ(20px);
+    background: rgb(72, 72, 72);
+    border: 2px solid rgb(72, 72, 72)
+}
+
+.box-bottom {
+    transform: translateX(-150px) rotateX(90deg);
+    background:rgb(206, 213, 188)
 }
