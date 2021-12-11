@@ -1,5 +1,6 @@
 const finalQuote = document.getElementById("quote");
 // Mobile menu
+let randomQuote
 $(document).ready(function () {
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function () {
@@ -17,11 +18,17 @@ $(document).ready(function () {
       })
       .then((data) => {
         console.log(data.length);
-        let randomQuote = data[Math.floor(Math.random() * data.length)];
+       randomQuote = data[Math.floor(Math.random() * data.length)];
         console.log(randomQuote);
       });
       return randomQuote
   }
-  getQuote().then((data)=>{
-    displayQuote(data)
-  });
+  
+  getQuote()
+  // .then((data)=>{
+  //   displayQuote(data)
+
+  // });
+
+
+
