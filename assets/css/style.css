@@ -4,15 +4,25 @@
     background-size: cover;
 }
 
+body {
+    background-image: url("../images/Blank\ 3259\ x\ 4563.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* height: 100vh; */
+}
+
+
 .navbar {
     background-color: transparent;
 }
 
-.navbar-menu, .navbar-burger, .navbar-end a {
+/* .navbar-menu, .navbar-burger, .navbar-end a {
     @include mobile {
         background-color: transparent;
     }
-}
+} */
 
 .title-custom {
     margin-top: 20vh;
@@ -28,16 +38,17 @@ h1 {
 }
 
 .bulma-overlay-mixin {
-    @include overlay(1.5rem);
     background-color: white;
     border-radius: 0.25em;
     color: white;
     opacity: 0.8;
     padding: 2em;
-  }
+}
 
 main {
-    height: 60vh;
+
+    /* height: 70vh; */
+
 }
 
 .custom-column{
