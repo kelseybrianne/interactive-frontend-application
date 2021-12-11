@@ -1,4 +1,3 @@
-let quotesRandom = []
 const finalQuote = document.getElementById("quote");
 // Mobile menu
 $(document).ready(function () {
@@ -8,6 +7,8 @@ $(document).ready(function () {
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");
   });
+});
+
   function getQuote() {
     let quoteURL = "https://type.fit/api/quotes";
     fetch(quoteURL)
@@ -15,28 +16,12 @@ $(document).ready(function () {
         return res.json();
       })
       .then((data) => {
-        quotesRandom.push(data);
+        console.log(data.length);
+        let randomQuote = data[Math.floor(Math.random() * data.length)];
+        console.log(randomQuote);
       });
+      return randomQuote
   }
-  getQuote();
-  console.log(quotesRandom);
-    // displayQuote()
-    let result = finalQuote.map(({ foo }) => foo)
-
-});
-
-// Just in case anyone wanted to take a look here's the link and function to the original API
-// let quoteURL = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?'
-// function getQuote (){
-//  fetch(quoteURL
-//     , {mode: 'no-cors'}
-//  )
-//  .then(function(response){
-//     console.log(response.ok);
-//     return response.json();
-//  })
-//  .then(function(data){
-//      console.log(data)
-//  });
-// }
-// getQuote()
+  getQuote().then((data)=>{
+    displayQuote(data)
+  });
