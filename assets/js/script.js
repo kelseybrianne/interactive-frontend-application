@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");
   });
+
   function getQuote() {
     let quoteURL = "https://type.fit/api/quotes";
     fetch(quoteURL)
@@ -40,3 +41,16 @@ $(document).ready(function () {
 //  });
 // }
 // getQuote()
+
+
+  // Cube animation on "take me to the challenge" button
+  $("#on-hover").mouseenter( function() {
+        $("#toggle").removeClass("cube-down");
+        $("#toggle").addClass("cube-up");
+        console.log("mouse enter");
+  })
+  $("#on-hover").mouseleave( function() {
+        $("#toggle").removeClass("cube-up");
+        $("#toggle").addClass("cube-down");
+        console.log("mouse gone");
+  })
