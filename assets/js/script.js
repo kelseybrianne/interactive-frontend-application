@@ -32,3 +32,25 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+    // Cube animation on "take me to the challenge" button
+    $("#on-hover").mouseenter( function() {
+      $("#toggle").removeClass("cube-down");
+      $("#toggle").addClass("cube-up");
+      console.log("mouse enter");
+})
+$("#on-hover").mouseleave( function() {
+      $("#toggle").removeClass("cube-up");
+      $("#toggle").addClass("cube-down");
+      console.log("mouse gone");
+})
