@@ -31,6 +31,7 @@ Create index.html with basic styling, title, and description of the purpose of t
 Add three challenges to the index.html
 
 
-
+Quick & Free Myers-Briggs Personality Quiz:
+https://www.16personalities.com/
 
 

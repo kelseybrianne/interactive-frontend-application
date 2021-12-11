@@ -1,27 +1,33 @@
-# 100 Day Self-Exploration Challenge
+# 30 Days of Self-Exploration 🧭 
 
 ## User Story
-AS someone in completing the self-exploration challenge
-I WANT to be given ideas for new activities I can do
-SO THAT I can be more in tune with my passions and what I enjoy doing
-
+```
+AS AN individual looking for self-betterment
+I WANT to be presented with new ideas for activities that I can participate in
+SO THAT I can explore my passions and try new things as part of the 30 day self-exploration challenge
+```
 
 ## Acceptance Criteria
 
-GIVEN I want to participate in the 100 day self-exploration challenge
+```
+GIVEN I want to participate in the 30 day self-exploration challenge
 WHEN I view the landing page
-THEN I am presented with a brief intro of how the application works and a button that takes me to the challenge
-WHEN I click on the challenge button
-THEN I am presented with the three parts of the challenge
-WHEN I click for more ideas for activities
-THEN I am prompted for the number of participants, price range, and type of activity
-WHEN prompted for the number of participants, price range, and type of activity
-THEN I select my preference from a dropdown menu for each category (Price: Free(0), On a budget(.1-.2), Expensive(>.3), Any price range; Participants(1, 2, 3-5, 5+, random); Type: Recreational, Social, Education, DIY, Charity, Cooking, Relaxation, Music, Busywork, Any type);
+THEN I am presented with a brief intro of what self-exploration is and a button that takes me to the challenge
+WHEN I click on the button that takes me to the challenge
+THEN I am presented with the three components that make up the challenge
+WHEN I click on the first component
+THEN I am prompted with a series of questions for the activity criteria
+WHEN asked for the amount of participants
+THEN I choose between the following given options: 1, 2, 3-5, 5+, or any number of participants
+WHEN asked for a desired price range
+THEN I choose between the following given options: free, on a budget, spendy, or any price range
+WHEN asked for the desired type of activity 
+THEN I choose between the following given options: recreational, social, education, DIY, charity, cooking, relaxaation, music, busywork, or any type
 WHEN I submit my preferences
-THEN I see an activity suggestion on the page and that activity is saved to a list 
+THEN I see an activity suggestion on the page and that activity is saved to a list that contains all previously generated activities
 WHEN I view the activity suggestion
-THEN I am given the option to go back to the main page and get another activity
-
+THEN I am given the option to go back to the main page or to be given another activity idea
+```
 
 
 
