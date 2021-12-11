@@ -1,4 +1,4 @@
-let quotesRandom = [];
+let quotesRandom = []
 const finalQuote = document.getElementById("quote");
 // Mobile menu
 $(document).ready(function () {
@@ -21,11 +21,12 @@ $(document).ready(function () {
   getQuote();
   console.log(quotesRandom);
     // displayQuote()
+    let result = finalQuote.map(({ foo }) => foo)
 
 });
 
 // Just in case anyone wanted to take a look here's the link and function to the original API
-// let quoteURL = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en'
+// let quoteURL = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?'
 // function getQuote (){
 //  fetch(quoteURL
 //     , {mode: 'no-cors'}
