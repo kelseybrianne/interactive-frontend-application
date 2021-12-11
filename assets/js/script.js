@@ -1,6 +1,6 @@
-let quotesRandom = []
 const finalQuote = document.getElementById("quote");
 // Mobile menu
+let randomQuote
 $(document).ready(function () {
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(function () {
@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");
   });
+});
 
   function getQuote() {
     let quoteURL = "https://type.fit/api/quotes";
@@ -16,41 +17,40 @@ $(document).ready(function () {
         return res.json();
       })
       .then((data) => {
-        quotesRandom.push(data);
+        console.log(data.length);
+       randomQuote = data[Math.floor(Math.random() * data.length)];
+        console.log(randomQuote);
       });
+      return randomQuote
   }
-  getQuote();
-  console.log(quotesRandom);
-    // displayQuote()
-    let result = finalQuote.map(({ foo }) => foo)
+  
+  getQuote()
+  // .then((data)=>{
+  //   displayQuote(data)
 
-});
-
-// Just in case anyone wanted to take a look here's the link and function to the original API
-// let quoteURL = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?'
-// function getQuote (){
-//  fetch(quoteURL
-//     , {mode: 'no-cors'}
-//  )
-//  .then(function(response){
-//     console.log(response.ok);
-//     return response.json();
-//  })
-//  .then(function(data){
-//      console.log(data)
-//  });
-// }
-// getQuote()
+  // });
 
 
-  // Cube animation on "take me to the challenge" button
-  $("#on-hover").mouseenter( function() {
-        $("#toggle").removeClass("cube-down");
-        $("#toggle").addClass("cube-up");
-        console.log("mouse enter");
-  })
-  $("#on-hover").mouseleave( function() {
-        $("#toggle").removeClass("cube-up");
-        $("#toggle").addClass("cube-down");
-        console.log("mouse gone");
-  })
+
+
+
+
+
+
+
+
+
+
+
+
+    // Cube animation on "take me to the challenge" button
+    $("#on-hover").mouseenter( function() {
+      $("#toggle").removeClass("cube-down");
+      $("#toggle").addClass("cube-up");
+      console.log("mouse enter");
+})
+$("#on-hover").mouseleave( function() {
+      $("#toggle").removeClass("cube-up");
+      $("#toggle").addClass("cube-down");
+      console.log("mouse gone");
+})
