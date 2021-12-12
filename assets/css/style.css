@@ -46,7 +46,9 @@ h1 {
 }
 
 main {
+
     /* height: 70vh; */
+
 }
 
 .custom-column{
@@ -113,3 +115,11 @@ main {
     transform: translateX(-150px) rotateX(90deg);
     background:rgb(206, 213, 188)
 }
+
+.activity {
+    width: 80%;
+}
+/* 
+.activity-questions {
+  padding: 3rem;
+} */
