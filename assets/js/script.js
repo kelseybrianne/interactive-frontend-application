@@ -1,6 +1,6 @@
 const authorEl = document.getElementById('author');
 const textEl =document.getElementById('text');
-let quoteTimer = 6;
+let quoteFade = document.getElementById("quoteAnimation")
 // Mobile menu
 let randomQuote
 $(document).ready(function () {
@@ -24,20 +24,16 @@ $(document).ready(function () {
        randomQuote = data[Math.floor(Math.random() * data.length)];
         console.log(randomQuote);
       textEl.innerHTML = randomQuote.text
-      authorEl.innerHTML = "   " + "-" + "  " + randomQuote.author 
+      $("#quoteAnimation").fadeToggle(6000);
+      authorEl.innerHTML = "-" + "  " + randomQuote.author + "  " + "-"
       if(randomQuote.author === null)
-        {authorEl.innerHTML = "   " + "-" + "  " + "Unknown"}
-        console.log(randomQuote.text)
-        console.log(randomQuote.author)
-      });
+        {authorEl.innerHTML = "-" + "  " + "Unknown" + "  " + "-"}
+        });
       return randomQuote
   }
 getQuote() 
-
 // funtion for timer for quotes
-setInterval(getQuote, 8000)
-
-
+ setInterval(getQuote, 6000)
 
 // Cube animation on "take me to the challenge" button
     $("#on-hover").mouseenter( function() {

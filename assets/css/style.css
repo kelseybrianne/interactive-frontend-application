@@ -104,3 +104,11 @@ main {
     transform: translateX(-150px) rotateX(90deg);
     background:rgb(206, 213, 188)
 }
+
+.quoteContainer{
+    position : relative
+}
+
+.quoteAnimation {
+    position : relative
+}
