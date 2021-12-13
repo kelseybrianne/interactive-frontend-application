@@ -4,7 +4,7 @@
     background-size: cover;
 }
 
-body {
+#activities-background {
     background-image: url("../images/Blank\ 3259\ x\ 4563.jpg");
     background-size: cover;
     background-position: center;
@@ -41,13 +41,13 @@ h1 {
     background-color: white;
     border-radius: 0.25em;
     color: white;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 2em;
-}
+} git 
 
 main {
-
-    /* height: 70vh; */
+    padding: 5rem;
+    height: 80vh;
 
 }
 
