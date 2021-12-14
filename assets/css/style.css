@@ -35,11 +35,7 @@
 } git 
 
 main {
-
-    /* height: 70vh; */
-    /* padding: 5rem; */
     height: 80vh;
-
 }
 
 .custom-column{
@@ -125,7 +121,7 @@ main {
     position : relative
 }
 /* BEGIN JOURNAL PAGE STYLES */
-body {
+#journal-background {
     min-height: 100vh;
     background-image: url("../images/journaling.jpg");
     background-size: cover;
