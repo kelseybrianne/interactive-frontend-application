@@ -5,7 +5,7 @@
 }
 
 #activities-background {
-    background-image: url("../images/Blank\ 3259\ x\ 4563.jpg");
+    background-image: url("../images/andres-molina-kcxWpnpIXiQ-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -133,4 +133,12 @@ body {
 
 .tile-custom {
     background-color: rgba(201, 211, 197, 0.74);
+}
+
+.overlay {
+    margin-top: 15%;
+}
+
+.hide {
+    display: none;
 }
