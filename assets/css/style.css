@@ -127,3 +127,9 @@ main {
 #generate-idea {
     background-color: rgb(206, 213, 188);
 }
+
+.saved-activity{
+    line-height: 1.6rem;
+    opacity: .9;
+
+}
