@@ -36,7 +36,7 @@
 } 
 
 .challenge {
-    height: 70vh;
+    min-height: 70vh;
 
 }
 
@@ -136,10 +136,12 @@
 
 .overlay {
     margin-top: 15%;
+    padding: 30px;
 }
 
 .hide {
     display: none;
+}
 
 /* Added hovering effect on the cards here*/
 

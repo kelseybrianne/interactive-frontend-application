@@ -10,6 +10,7 @@ function removeBtn() {
     $("#generate-idea").addClass("hide");
 }
 
+var newActivity="";
 
 var fetchActivity = function(requestURL) {
     fetch(requestURL)
@@ -20,28 +21,60 @@ var fetchActivity = function(requestURL) {
         console.log(data);
         removeBtn();
         console.log(data.activity);
-        var newActivity= `<div class="card activity is-flex is-justify-content-center">
-        <div class="card-content">
-          <div class="content subtitle is-4">
-            ${data.activity}
-          </div>
-        </div>
-      </div>
-    
-      <div class="field is-grouped mt-5 has-text-centered is-flex is-justify-content-center">
-        <div class="control">
-          <button class="button is-light is-rounded">New activity</button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-light is-rounded">Save</button>
-        </div>
-      </div>`
-    
-        $("#activityEl").append(newActivity)
+        if(data.activity) {
+            console.log("Yes");
+        
+            newActivity= 
+            `<div id="remove-me">
+                <div class="card activity is-flex is-justify-content-center">
+                    <div class="card-content">
+                        <div class="content subtitle is-4">
+                            ${data.activity}
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="field is-grouped mt-5 has-text-centered is-flex is-justify-content-center">
+                    <div class="control">
+                        <button id="new-activity" class="button is-light is-rounded">New activity</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light is-rounded">Save</button>
+                    </div>
+                </div>
+            </div>`
+        
+            $("#activityEl").append(newActivity)
+        } else {
+            var noActivity = 
+            `<div id="remove-me">
+                <div class="card activity is-flex is-justify-content-center has-background-info-light">
+                    <div class="card-content">
+                        <div class="content subtitle is-4 has-text-info">
+                            No activity found with the specified parameters
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="field is-grouped mt-5 has-text-centered is-flex is-justify-content-center">
+                    <div class="control">
+                        <button id="new-activity" class="button is-light is-rounded">Try again</button>
+                    </div>
+                </div>
+            </div>`
+            
+            $("#activityEl").append(noActivity);
+        }
+
+        $("#new-activity").on("click", function(){
+            $("#remove-me").remove();
+            getActivity();
+        });
     })
 }
 
 function getActivity() {
+    newActivity=""; 
 
     var requestURL = `http://www.boredapi.com/api/activity?`;
 
