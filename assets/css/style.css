@@ -133,3 +133,11 @@ main {
     opacity: .9;
 
 }
+
+.quoteContainer{
+    position : relative
+}
+
+.quoteAnimation {
+    position : relative
+}
