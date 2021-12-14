@@ -1,0 +1,6 @@
+/* Datepicker */
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
+
+
