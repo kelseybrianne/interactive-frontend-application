@@ -45,7 +45,7 @@ var fetchActivity = function(requestURL) {
                         <button id="new-activity" class="button is-light is-rounded">New activity</button>
                     </div>
                     <div class="control">
-                        <button class="button is-link is-light is-rounded">Save</button>
+                        <button id="save" class="button is-link is-light is-rounded">Save</button>
                     </div>
                 </div>
             </div>`
@@ -73,16 +73,28 @@ var fetchActivity = function(requestURL) {
         }
 
         // Add function to get new activity when "New activity" button is clicked
-        $("#new-activity").on("click", function(){
-            $("#remove-me").remove();
-            getActivity();
-        });
+        $("#new-activity").on("click", getActivity);
+
+        // Save rendered activity to a card below the generator
+        $("#save").on("click", function() {
+            var savedActivity = 
+            `<div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
+                <div class="card-content">
+                    <p class="content is-size-3 has-text-centered" style="line-height: 1.5">
+                        ${data.activity} 
+                    </p>
+                </div>
+            </div> `
+            $("#saved-activity").append(savedActivity);
+        })
     })
 }
 
 // Make API call and add different query strings to it based on parameters the user chooses
 function getActivity() {
-    newActivity=""; 
+
+    // Remove rendered activity before rendering a new one
+    $("#remove-me").remove()
 
     var requestURL = `http://www.boredapi.com/api/activity?`;
 
