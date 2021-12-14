@@ -1,3 +1,11 @@
+var typeValue="Any type";
+var newActivity="";
+var priceValue = "Any price range"
+var minPrice = 0;
+var maxPrice = 1;
+var participantsValue = "Any number"
+
+
 // Check for click events on the navbar burger icon
 $(".navbar-burger").click(function () {
 // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
@@ -5,13 +13,12 @@ $(".navbar-burger").toggleClass("is-active");
 $(".navbar-menu").toggleClass("is-active");
 });
 
-
+// Hide "GENERATE IDEA" button when clicked
 function removeBtn() {
     $("#generate-idea").addClass("hide");
 }
 
-var newActivity="";
-
+// Fetch bored API data and render to page
 var fetchActivity = function(requestURL) {
     fetch(requestURL)
     .then(function (response) {
@@ -20,10 +27,9 @@ var fetchActivity = function(requestURL) {
     .then(function (data) {
         console.log(data);
         removeBtn();
-        console.log(data.activity);
+      
+        // Display "No activity found with the specified parameters" if it comes back as undefined
         if(data.activity) {
-            console.log("Yes");
-        
             newActivity= 
             `<div id="remove-me">
                 <div class="card activity is-flex is-justify-content-center">
@@ -66,6 +72,7 @@ var fetchActivity = function(requestURL) {
             $("#activityEl").append(noActivity);
         }
 
+        // Add function to get new activity when "New activity" button is clicked
         $("#new-activity").on("click", function(){
             $("#remove-me").remove();
             getActivity();
@@ -73,6 +80,7 @@ var fetchActivity = function(requestURL) {
     })
 }
 
+// Make API call and add different query strings to it based on parameters the user chooses
 function getActivity() {
     newActivity=""; 
 
@@ -86,28 +94,18 @@ function getActivity() {
         requestURL += `&minprice=${minPrice}&maxprice=${maxPrice}`
     } 
 
-    // if(priceValue !== "Any price range") {
-    //     requestURL += `&participants=${participantsValue}`
-    // }
-
     fetchActivity(requestURL);
-
 }
 
-$("#generate-idea").on("click",getActivity);
-
-var typeValue="Any type";
-
+// Change URL for API call when the user changes desired activity type
 $("#type").on("change", function(e) {
     typeValue = e.target.value.toLowerCase();
 });
 
-var priceValue = "Any price range"
-var minPrice = 0;
-var maxPrice = 1;
+// Change URL for API call when the user changes desired price range
 $("#price").on("change", function(e) {
     priceValue = e.target.value;
-
+    
     if(priceValue === "Free") {
         minPrice = 0;
         maxPrice = 0;
@@ -120,11 +118,7 @@ $("#price").on("change", function(e) {
         minPrice = .4;
         maxPrice = 1;
     }
-
-    console.log(minPrice + "and" + maxPrice)
 });
 
-var participantsValue = "Any number"
-$("#participants").on("change", function(e) {
-    participantsValue = e.target.value.toLowerCase();
-});
+// Do something when user clicks "GENERATE IDEA" button
+$("#generate-idea").on("click",getActivity);
