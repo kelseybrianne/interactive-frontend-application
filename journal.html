@@ -11,28 +11,29 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
-    </script>
 </head>
-<body>
-    <div class="tile is-parent">
-        <article class="tile is-child notification tile-custom">
-          <h1 class="subtitle">Congratulations on completing today's activity!</h1>
-          <h2 class="subtitle">You've taken a great step on your journey in self-exploration. Use the space below to reflect on what you've learned about yourself today, and how you can use this knowledge to live to your fullest potential:</h2>
-          <p class="title">Date: <input type="text" id="datepicker"></p>
+<body id="journal-background">
+
+<!-- Journal Tile -->
+    <div class="tile is-parent columns is-centered pt-5">
+        <article class="tile is-child notification tile-custom column is-three-quarters">
+          <h1 class="subtitle is-1">Congratulations on completing today's activity!</h1>
+          <h2 class="subtitle is-4">You just took a great step on your journey in self-exploration. Use the space below to reflect on what you've learned about yourself today, and how you can use this knowledge to live your life to its fullest potential:</h2>
+          <p class="subtitle is-3">Date: <input type="text" id="datepicker"></p>
           <div class="content">
             <div class="field">
                 <div class="control">
-                  <textarea class="textarea is-medium" placeholder="Write your journal entry here..."></textarea>
+                  <textarea class="textarea is-large" placeholder="Write your journal entry here..."></textarea>
                 </div>
             </div>
+            <button id="save-btn" class="button is-rounded">Save Entry</button>
           </div>
         </article>
       </div>
-    
-  
+
+<!-- Journal Entries -->
+      <div id="journal-entries"></div>
+      
+  <script src="assets/js/journal.js"></script>
 </body>
 </html>

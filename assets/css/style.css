@@ -10,19 +10,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* height: 100vh; */
 }
 
 
 .navbar {
     background-color: transparent;
 }
-
-/* .navbar-menu, .navbar-burger, .navbar-end a {
-    @include mobile {
-        background-color: transparent;
-    }
-} */
 
 .title-custom {
     margin-top: 20vh;
@@ -33,22 +26,16 @@
     color: rgb(69, 69, 69);
 }
 
-/* h1 {
-    font-size: 8rem;
-} */
-
 .bulma-overlay-mixin {
     background-color: white;
     border-radius: 0.25em;
     color: white;
     opacity: 0.9;
     padding: 2em;
-} git 
+} 
 
-main {
-    padding: 5rem;
-    height: 80vh;
-
+.challenge {
+    height: 70vh;
 }
 
 .custom-column{
@@ -116,14 +103,6 @@ main {
     background:rgb(206, 213, 188)
 }
 
-/* .activity {
-    width: 80%;
-} */
-/* 
-.activity-questions {
-  padding: 3rem;
-} */
-
 #generate-idea {
     background-color: rgb(206, 213, 188);
 }
@@ -134,8 +113,15 @@ main {
 
 }
 
+.quoteContainer{
+    position : relative
+}
+
+.quoteAnimation {
+    position : relative
+}
 /* BEGIN JOURNAL PAGE STYLES */
-body {
+#journal-background {
     min-height: 100vh;
     background-image: url("../images/journaling.jpg");
     background-size: cover;
@@ -154,4 +140,5 @@ body {
 
 p{
     font-family:'Segoe UI';
+    background-color: rgba(255, 255, 255, 0.74);
 }
