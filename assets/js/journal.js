@@ -1,5 +1,6 @@
 /* Datepicker */
 $( function() {
+  displayEntry();
   $( "#datepicker" ).datepicker();
 } );
 
@@ -25,7 +26,7 @@ $("#save-btn").on("click", function (event) {
   });
 
 function displayEntry(){
-  // $('#entry-list').empty();
+  $('#entry-list').empty();
   for (let i = 0; i < storedText.length; i++) {
     let entryText = storedText[i].entry;
     let dateText = storedText[i].date;
@@ -39,6 +40,5 @@ function displayEntry(){
 
     row.append(colDate, colEntry);
     $('#entry-list').append(row)
-
   }
 }
