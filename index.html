@@ -30,14 +30,14 @@
 
             <div id="navbar" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item is-tab">Activities</a>
-                    <a class="navbar-item is-tab">Journal</a>
+                    <a class="navbar-item is-tab" href="activities.html">Activities</a>
+                    <a class="navbar-item is-tab" href="journal.html">Journal</a>
                 </div>
             </div>
         </nav>
 
         <div
-            class="is-flex is-flex-direction-column is-align-self-center title-custom bulma-overlay-mixin column is-two-thirds has-text-centered">
+            class="is-flex is-flex-direction-column is-align-self-center title-custom bulma-overlay-mixin column is-two-thirds has-text-centered" >
             <h1 class="title">30 Days of Self-Exploration</h1>
             <p class="text subtitle is-5 p-4 is-align-self-center">Do you feel stuck? Lost in an annoying cycle that you
                 can't seem to describe or get out of? Do you ever question yourself? Either who you are as a person or
@@ -45,37 +45,44 @@
                 your future? If you answered yes to any of these, it is time to emerse yourself in the world of
                 self-discovery.</p>
             <div id="on-hover" class="wrapper is-flex is-align-self-center pb-5">
-                <div id="toggle" class="">
+                <a id="toggle" class="" href="#challenge">
                     <div class="box box-front has-text-light">Take me to the challenge</div>
                     <div class="box box-bottom is-light"><i class="fas fa-arrow-up"></i></div>
-                </div>
+                </a>
             </div>
-
         </div>
     </div>
 
+<<<<<<< HEAD
     <main>
-        <div class="columns has-text-centered subtitle is-centered m-5">
+=======
+    <main id="challenge">
+>>>>>>> 9da1f954b8a1fe863810fd525905c87caa4cd561
+        <div class="columns has-text-centered subtitle is-centered m-5 challenge">
             <div class="column custom-column is-3">
                 <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="./assets/images/andres-molina-kcxWpnpIXiQ-unsplash.jpg" alt="Passion">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            Explore your passions and try new things.
-                            "Need help generating ideas? Find ideas here!".
-                            <br>
-                            <br>
-                    
+                    <a href="activities.html">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="./assets/images/andres-molina-kcxWpnpIXiQ-unsplash.jpg" alt="Passion">
+                            </figure>
                         </div>
-                    </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <strong>Activities</strong>
+                                <br>
+                                <p>Explore your passions and try new things Need help generating ideas? Find ideas here!</p>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="column custom-column is-3">
+            <div  class="column custom-column is-3">
                 <div class="card">
+                    <a href="https://www.16personalities.com/">
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <img src="./assets/images/brett-jordan-lYW2El-YSCs-unsplash.jpg" alt="Who are you">
@@ -83,28 +90,36 @@
                     </div>
                     <div class="card-content">
                         <div class="content">
-                            Evaluate your personality trait, skills and identify what you value about yourself!
-                            "Here you'll find data of different personality types!"
+                            <strong>Personality Type</strong>
+                            <br>
+                            <p>Evaluate your personality trait, skills and identify what you value about yourself!
+                                Here you'll find data of different personality types!</p>
                             <br>
                         </div>
                     </div>
                 </div>
+            </a>
             </div>
             <div class="column custom-column is-3">
                 <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="./assets/images/journaling.jpg" alt="Journaling">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            Keep a journal for 100 days with what activities you tried, what you discovered about
-                            yourself, etc.
-                            "Here is a link for your journal!"
-                            <br>
+                    <a href="journal.html">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="./assets/images/journaling.jpg" alt="Journaling">
+                            </figure>
                         </div>
-                    </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <strong>Journal</strong>
+                                <br>
+                                <p>A journal for 100 days with what activities you tried, what you discovered about
+                                    yourself, etc.
+                                    Here is a link for your journal!</p>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
