@@ -133,3 +133,14 @@ main {
     opacity: .9;
 
 }
+
+/* BEGIN JOURNAL PAGE STYLES */
+body {
+    min-height: 100vh;
+    background-image: url("../images/journaling.jpg");
+    background-size: cover;
+}
+
+.tile-custom {
+    background-color: rgba(201, 211, 197, 0.74);
+}
