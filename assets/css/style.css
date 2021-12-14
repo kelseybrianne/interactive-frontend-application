@@ -4,13 +4,12 @@
     background-size: cover;
 }
 
-body {
+#background-pic {
     background-image: url("../images/Blank\ 3259\ x\ 4563.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* height: 100vh; */
 }
 
 
