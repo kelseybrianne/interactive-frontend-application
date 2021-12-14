@@ -32,13 +32,10 @@
     color: white;
     opacity: 0.9;
     padding: 2em;
-} git 
+} 
 
-main {
-
-    padding: 5rem;
-    height: 80vh;
-
+.challenge {
+    height: 70vh;
 }
 
 .custom-column{
@@ -116,6 +113,13 @@ main {
 
 }
 
+.quoteContainer{
+    position : relative
+}
+
+.quoteAnimation {
+    position : relative
+}
 /* BEGIN JOURNAL PAGE STYLES */
 #journal-background {
     min-height: 100vh;
