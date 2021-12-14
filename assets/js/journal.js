@@ -5,20 +5,6 @@ $( function() {
 
 let storedText = JSON.parse(localStorage.getItem("storedEntry")) || [];
 
-
-// function saveJournalEntry () {
-//     var entry = document.getElementById('journal-entry').value();
-//     if(entry !== '') {
-//         var journalEntry = JSON.parse(window.localStorage.getItem('journalEntry')) || [];
-//         var savedEntry = {
-//             date: date
-//             entry: entry
-//         }
-//         journalEntry.push(savedEntry)
-//         window.localStorage.setItem('journalEntry', JSON.stringify(journalEntry));
-//     }
-// }
-
 $("#save-btn").on("click", function (event) {
     event.preventDefault();
     let entry = $(this).siblings("#journal-entry").val();
@@ -30,15 +16,9 @@ $("#save-btn").on("click", function (event) {
     }
     storedEntryObj.entry = entry;
     storedEntryObj.date = date;
-
     storedText.push(storedEntryObj)
-
     console.log('storedText', storedText)
-
     localStorage.setItem("storedEntry", JSON.stringify(storedText));
-
-    // localStorage.setItem("entry", entry);
-    // localStorage.setItem("date", date);
     displayEntry();
     console.log(date);
     console.log(entry);
@@ -56,12 +36,9 @@ function displayEntry(){
     
     colEntry.innerHTML = entryText;
     colDate.innerHTML = dateText
-    $("#date-entry").append(colDate) 
-    $("#text-entry").append(colEntry)
 
     row.append(colDate, colEntry);
     $('#entry-list').append(row)
-    // "date-entry"
-    // "text-entry"
+
   }
 }
