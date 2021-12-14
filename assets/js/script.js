@@ -1,4 +1,6 @@
-const finalQuote = document.getElementById("quote");
+const authorEl = document.getElementById('author');
+const textEl =document.getElementById('text');
+let quoteFade = document.getElementById("quoteAnimation")
 // Mobile menu
 let randomQuote
 $(document).ready(function () {
