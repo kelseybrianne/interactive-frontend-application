@@ -117,6 +117,13 @@ main {
 
 }
 
+.quoteContainer{
+    position : relative
+}
+
+.quoteAnimation {
+    position : relative
+}
 /* BEGIN JOURNAL PAGE STYLES */
 body {
     min-height: 100vh;

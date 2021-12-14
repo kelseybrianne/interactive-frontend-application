@@ -1,4 +1,6 @@
-const finalQuote = document.getElementById("quote");
+const authorEl = document.getElementById('author');
+const textEl =document.getElementById('text');
+let quoteFade = document.getElementById("quoteAnimation")
 // Mobile menu
 let randomQuote
 $(document).ready(function () {
@@ -10,6 +12,7 @@ $(document).ready(function () {
   });
 });
 
+  // function to get and display quote from API 
   function getQuote() {
     let quoteURL = "https://type.fit/api/quotes";
     fetch(quoteURL)
@@ -20,15 +23,17 @@ $(document).ready(function () {
         console.log(data.length);
        randomQuote = data[Math.floor(Math.random() * data.length)];
         console.log(randomQuote);
-      });
+      textEl.innerHTML = randomQuote.text
+      $("#quoteAnimation").fadeToggle(6000);
+      authorEl.innerHTML = "-" + "  " + randomQuote.author + "  " + "-"
+      if(randomQuote.author === null)
+        {authorEl.innerHTML = "-" + "  " + "Unknown" + "  " + "-"}
+        });
       return randomQuote
   }
-  
-  getQuote()
-  // .then((data)=>{
-  //   displayQuote(data)
-
-  // });
+getQuote() 
+// funtion for timer for quotes
+ setInterval(getQuote, 6000)
 
 
 
