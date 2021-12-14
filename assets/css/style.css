@@ -128,5 +128,17 @@
 }
 
 .tile-custom {
+    background-color: rgba(201, 211, 197, 0.74);
+}
+
+/* Added hovering effect on the cards here*/
+
+.custom-column:hover{
+    display: block;
+    opacity: 0.5;
+}
+
+p{
+    font-family:'Segoe UI';
     background-color: rgba(255, 255, 255, 0.74);
 }
