@@ -29,13 +29,13 @@
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(69, 69, 69);
 }
 
-h1 {
+/* h1 {
     font-size: 8rem;
-}
+} */
 
 .bulma-overlay-mixin {
     background-color: white;
@@ -116,10 +116,20 @@ main {
     background:rgb(206, 213, 188)
 }
 
-.activity {
+/* .activity {
     width: 80%;
-}
+} */
 /* 
 .activity-questions {
   padding: 3rem;
 } */
+
+#generate-idea {
+    background-color: rgb(206, 213, 188);
+}
+
+.saved-activity{
+    line-height: 1.6rem;
+    opacity: .9;
+
+}
