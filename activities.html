@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body id="activities-background">
-    <!-- <div class="is-flex is-flex-direction-column"> -->
         <nav class="navbar is-transparent is-flex " role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <!-- <a class="navbar-item" href="https://bulma.io">
@@ -33,15 +32,16 @@
         </nav>
 
         
-        <div class="bulma-overlay-mixin-parent m-5">
-          <div class="bulma-overlay-mixin column is-two-thirds is-offset-2 my-5">
+        <div class="bulma-overlay-mixin-parent overlay my-5">
+          <div class="bulma-overlay-mixin column is-two-thirds is-offset-2 overlay">
+
                 <div class="columns is-vcentered">
                     <div class="column is-3 activity-questions">
                         <div class="field m-5">
                             <label class="label">Type of activity</label>
                             <div class="control">
                               <div class="select is-rounded">
-                                <select>
+                                <select id="type">
                                     <option>Any type</option>
                                     <option>Recreational</option>
                                     <option>Social</option>
@@ -60,11 +60,11 @@
                             <label class="label">Desired price range</label>
                             <div class="control">
                               <div class="select is-rounded">
-                                <select>
+                                <select id="price">
+                                    <option>Any price range</option>
                                     <option>Free</option>
                                     <option>On a budget</option>
                                     <option>Spendy</option>
-                                    <option>Any price range</option>
                                 </select>
                               </div>
                             </div>
@@ -73,12 +73,12 @@
                             <label class="label">Number of participants</label>
                             <div class="control">
                               <div class="select is-rounded">
-                                <select>
+                                <select id="participants">
+                                    <option>Any number</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3-5</option>
                                     <option>5+</option>
-                                    <option>I don't care</option>
                                 </select>
                               </div>
                             </div>
@@ -86,10 +86,16 @@
 
                     </div>
 
-                    <div class="column has-text-centered is-9">
-                        <div class="card activity is-flex is-justify-content-center m-5">
+                    <div id="activityEl" class="column has-text-centered is-9">
+                      <div class="field">
+                        <div class="control">
+                          <button id="generate-idea" class="button is-rounded is-large">GENERATE IDEA</button>
+                        </div>
+                      </div>
+
+                        <!-- <div class="card activity is-flex is-justify-content-center">
                             <div class="card-content">
-                              <div class="content subtitle is-3">
+                              <div class="content subtitle is-4">
                                 Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.
                               </div>
                             </div>
@@ -102,22 +108,16 @@
                             <div class="control">
                               <button class="button is-link is-light is-rounded">Save</button>
                             </div>
-                          </div>
-
-
-                          <!-- <div class="field">
-                            <div class="control">
-                              <button id="generate-idea" class="button is-rounded is-large">GENERATE IDEA</button>
-                            </div>
                           </div> -->
+
+
 
                     </div>
                 </div>
                     
 
             </div>
-<!-- 
-            <div class="bulma-overlay-mixin-parent"> -->
+
               <div class=" column is-two-thirds is-offset-2 mt-5">
                 <div class="columns is-centered is-multiline">
                   <!-- <div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
@@ -161,13 +161,9 @@
 
 
               </div>
-            <!-- </div> -->
 
 
         </div>
-
-
-    <!-- </div> -->
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
