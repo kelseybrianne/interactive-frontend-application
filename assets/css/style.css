@@ -4,7 +4,7 @@
     background-size: cover;
 }
 
-#background-pic {
+#activities-background {
     background-image: url("../images/Blank\ 3259\ x\ 4563.jpg");
     background-size: cover;
     background-position: center;
@@ -30,13 +30,15 @@
     background-color: white;
     border-radius: 0.25em;
     color: white;
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 2em;
-}
+} git 
 
 main {
 
-    height: 70vh;
+    /* height: 70vh; */
+    /* padding: 5rem; */
+    height: 80vh;
 
 }
 
@@ -113,4 +115,15 @@ main {
     line-height: 1.6rem;
     opacity: .9;
 
+}
+
+/* BEGIN JOURNAL PAGE STYLES */
+body {
+    min-height: 100vh;
+    background-image: url("../images/journaling.jpg");
+    background-size: cover;
+}
+
+.tile-custom {
+    background-color: rgba(201, 211, 197, 0.74);
 }
