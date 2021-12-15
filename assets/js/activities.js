@@ -4,6 +4,8 @@ var priceValue = "Any price range"
 var minPrice = 0;
 var maxPrice = 1;
 var participantsValue = "Any number"
+var activityArr = [];
+
 
 
 // Check for click events on the navbar burger icon
@@ -17,6 +19,26 @@ $(".navbar-menu").toggleClass("is-active");
 function removeBtn() {
     $("#generate-idea").addClass("hide");
 }
+
+// Get saved activities from local storage and render to page
+var savedActivities = JSON.parse(localStorage.getItem("saved-activities"));
+if (savedActivities !== null) {
+    activityArr = savedActivities;
+}
+
+for (var i=0; i<activityArr.length; i++) {
+                
+    var savedActivity = 
+    `<div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
+        <div class="card-content">
+            <p class="content is-size-4 has-text-centered" style="line-height: 1.5">
+                ${savedActivities[i]} 
+            </p>
+        </div>
+    </div> `
+    $("#saved-activity").append(savedActivity);
+}
+
 
 // Fetch bored API data and render to page
 var fetchActivity = function(requestURL) {
@@ -49,7 +71,7 @@ var fetchActivity = function(requestURL) {
                     </div>
                 </div>
             </div>`
-        
+            
             $("#activityEl").append(newActivity)
         } else {
             var noActivity = 
@@ -77,15 +99,28 @@ var fetchActivity = function(requestURL) {
 
         // Save rendered activity to a card below the generator
         $("#save").on("click", function() {
-            var savedActivity = 
-            `<div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
-                <div class="card-content">
-                    <p class="content is-size-3 has-text-centered" style="line-height: 1.5">
-                        ${data.activity} 
-                    </p>
-                </div>
-            </div> `
+            
+            // Prevent activity from being saved more than once
+            if(activityArr.includes(data.activity)) {
+                return;
+            }
+
+            activityArr.push(data.activity);
+
+            for (var i=0; i<activityArr.length; i++) {
+                
+                var savedActivity = 
+                `<div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
+                    <div class="card-content">
+                        <p class="content is-size-4 has-text-centered" style="line-height: 1.5">
+                            ${activityArr[i]} 
+                        </p>
+                    </div>
+                </div> `
+            }
+            
             $("#saved-activity").append(savedActivity);
+            localStorage.setItem("saved-activities", JSON.stringify(activityArr))
         })
     })
 }
