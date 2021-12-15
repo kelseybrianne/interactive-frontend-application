@@ -20,10 +20,11 @@
     display: none;
 }
 
-/* p {
+p {
     font-family:'Segoe UI';
-    background-color: rgba(255, 255, 255, 0.74);
-} */
+    /* background-color: rgba(255, 255, 255, 0.74); */
+    font-size: 1.1rem;
+}
 
 .border {
     border: 1px solid rgba(255, 255, 255, 0.74);
@@ -47,7 +48,25 @@
 }
 
 .challenge {
-    min-height: 70vh;
+    min-height: 70vh; 
+}
+
+.challenge-img {
+    /* height: 2rem; */
+}
+
+.challenge-img img{
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.icon {
+    font-size: .9rem;
+    color:rgb(177, 177, 177);
 }
 
 .custom-column {
