@@ -24,7 +24,7 @@ $(document).ready(function () {
        randomQuote = data[Math.floor(Math.random() * data.length)];
         console.log(randomQuote);
       textEl.innerHTML = randomQuote.text
-      $("#quoteAnimation").fadeToggle(6000);
+      $("#quoteAnimation").fadeToggle(5000);
       authorEl.innerHTML = "-" + "  " + randomQuote.author + "  " + "-"
       if(randomQuote.author === null)
         {authorEl.innerHTML = "-" + "  " + "Unknown" + "  " + "-"}
@@ -33,7 +33,7 @@ $(document).ready(function () {
   }
 getQuote() 
 // funtion for timer for quotes
- setInterval(getQuote, 6000)
+ setInterval(getQuote, 7000)
 
 
 
