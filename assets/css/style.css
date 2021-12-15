@@ -1,20 +1,40 @@
+/* Shared between pages */
+.navbar {
+    background-color: transparent;
+}
+
+.bulma-overlay-mixin {
+    background-color: white;
+    border-radius: 0.25em;
+    color: white;
+    opacity: 0.9;
+    padding: 2em;
+} 
+
+.overlay {
+    margin-top: 10%;
+    padding: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+/* p {
+    font-family:'Segoe UI';
+    background-color: rgba(255, 255, 255, 0.74);
+} */
+
+.border {
+    border: 1px solid rgba(255, 255, 255, 0.74);
+}
+
+
+/* Home page */
 #bg-pic {
     min-height: 100vh;
     background-image: url("../images/transparent-img.jpg");
     background-size: cover;
-}
-
-#activities-background {
-    background-image: url("../images/andres-molina-kcxWpnpIXiQ-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
-.navbar {
-    background-color: transparent;
 }
 
 .title-custom {
@@ -26,21 +46,25 @@
     font-size: 2rem;
 }
 
-.bulma-overlay-mixin {
-    background-color: white;
-    border-radius: 0.25em;
-    color: white;
-    opacity: 0.9;
-    padding: 2em;
-
-} 
-
 .challenge {
     min-height: 70vh;
 }
 
-.custom-column{
+.custom-column {
     background-color: white;
+}
+
+.custom-column:hover {
+    display: block;
+    opacity: 0.5;
+}
+
+.quoteContainer{
+    position : relative
+}
+
+.quoteAnimation {
+    position : relative
 }
 
 @media screen and (min-width: 769px) {
@@ -118,6 +142,15 @@
     background:rgb(206, 213, 188)
 }
 
+/* Activities page */
+#activities-background {
+    background-image: url("../images/andres-molina-kcxWpnpIXiQ-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 #generate-idea {
     background-color: rgb(206, 213, 188);
 }
@@ -125,17 +158,9 @@
 .saved-activity{
     line-height: 1.6rem;
     opacity: .9;
-
 }
 
-.quoteContainer{
-    position : relative
-}
-
-.quoteAnimation {
-    position : relative
-}
-/* BEGIN JOURNAL PAGE STYLES */
+/* Journal page */
 #journal-background {
     min-height: 100vh;
     background-image: url("../images/journaling.jpg");
@@ -144,31 +169,4 @@
 
 .tile-custom {
     background-color: rgba(201, 211, 197, 0.74);
-}
-
-
-.overlay {
-    margin-top: 10%;
-    padding: 30px;
-}
-
-.hide {
-    display: none;
-}
-
-/* Added hovering effect on the cards here*/
-
-.custom-column:hover{
-    display: block;
-    opacity: 0.5;
-}
-
-p{
-    font-family:'Segoe UI';
-    background-color: rgba(255, 255, 255, 0.74);
-
-}
-
-.border {
-    border: 1px solid rgba(255, 255, 255, 0.74);
 }
