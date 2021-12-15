@@ -15,50 +15,52 @@
 <body id="journal-background">
   <nav class="navbar is-transparent is-flex " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <!-- <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-        </a> -->
+      <!-- <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a> -->
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
     <div id="navbar" class="navbar-menu">
-        <div class="navbar-end">
-            <a class="navbar-item is-tab has-text-light" href="index.html">Home</a>
-            <a class="navbar-item is-tab has-text-light" href="activities.html">Activities</a>
-        </div>
+      <div class="navbar-end">
+        <a class="navbar-item is-tab has-text-light" href="index.html">Home</a>
+        <a class="navbar-item is-tab has-text-light" href="activities.html">Activities</a>
+      </div>
     </div>
   </nav>
 
-    <div class="tile is-parent">
-        <article class="tile is-child notification tile-custom">
-          <h1 class="subtitle">Congratulations on completing today's activity!</h1>
-          <h2 class="subtitle">You've taken a great step on your journey in self-exploration. Use the space below to reflect on what you've learned about yourself today, and how you can use this knowledge to live to your fullest potential:</h2>
-          <p class="title">Date: <input type="text" id="datepicker"></p>
+  <div class="tile is-parent">
+    <article class="tile is-child notification tile-custom">
+      <h1 class="subtitle">Congratulations on completing today's activity!</h1>
+      <h2 class="subtitle">You've taken a great step on your journey in self-exploration. Use the space below to reflect on what you've learned about yourself today, and how you can use this knowledge to live to your fullest potential:</h2>
+      <p class="title">Date: <input type="text" id="datepicker"></p>
 
-          <div class="content">
-            <div class="field">
-              <div class="control">
-                  <textarea id="journal-entry" class="textarea is-large" placeholder="Write your journal entry here..."></textarea>
-                  <button id="save-btn" class="button is-rounded">Save Entry</button>
-                </div>
-            </div>
+      <div class="content">
+        <div class="field">
+          <div class="control">
+            <textarea id="journal-entry" class="textarea is-large" placeholder="Write your journal entry here..."></textarea>
+            <button id="save-btn" class="button is-rounded">Save Entry</button>
           </div>
-        </article>
+        </div>
       </div>
+    </article>
+  </div>
 
 
-<section class="section is-small">
-<table id="entry-list" class=" table is-striped is-fullwidth">
-<th id= "date-entry" class="tile-custom">Date</th>
-<th id ="text-entry" class="tile-custom">Entry</th>
-</table>
-</section>
+  <section class="section is-small">
+    <table id="entry-list" class=" table is-striped is-fullwidth">
+      <th id= "date-entry" class="tile-custom">Date</th>
+      <th id ="text-entry" class="tile-custom">Entry</th>
+    </table>
+  </section>
 
   <script src="assets/js/journal.js"></script>
+
 </body>
+
 </html>
