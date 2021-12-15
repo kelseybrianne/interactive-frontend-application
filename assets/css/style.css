@@ -59,12 +59,14 @@
     opacity: 0.5;
 }
 
-.quoteContainer{
-    position : relative
+#quoteContainer{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .quoteAnimation {
-    position : relative
+    position: relative;
 }
 
 @media screen and (min-width: 769px) {
@@ -74,6 +76,11 @@
 
     .title {
         font-size: 4rem;
+    }
+
+    #text {
+        width: 50ch;
+        margin: 0 auto;
     }
     
 }
