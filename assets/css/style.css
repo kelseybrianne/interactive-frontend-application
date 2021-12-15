@@ -170,6 +170,24 @@ p {
 .saved-activity{
     line-height: 1.6rem;
     opacity: .9;
+
+    position: relative;
+}
+
+.delete-custom {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+}
+
+.bulma-delete-mixin {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+  }
+
+.quoteContainer{
+    position : relative
 }
 
 /* Journal page */
