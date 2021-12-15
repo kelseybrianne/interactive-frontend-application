@@ -18,12 +18,12 @@
 }
 
 .title-custom {
-    margin-top: 20vh;
+    margin: 30px;
 }
 
 .title {
-    font-size: 4rem;
     color: rgb(69, 69, 69);
+    font-size: 2rem;
 }
 
 .bulma-overlay-mixin {
@@ -37,15 +37,28 @@
 
 .challenge {
     min-height: 70vh;
-
 }
 
 .custom-column{
     background-color: white;
 }
 
-.text {
-    width: 60ch;
+@media screen and (min-width: 769px) {
+    .title-custom {
+        margin-top: 20vh;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .text {
+        width: 60ch;
+    }
+
 }
 
 /* Cube animation on "take me to the challenge" button */
@@ -90,18 +103,18 @@
 .box{
     position: absolute;
     padding: 10px;
-    width: 300px;
+    width: 230px;
     height: 40px;
 }
 
 .box-front {
-    transform: translateX(-150px) translateY(-20px) translateZ(20px);
+    transform: translateX(-115px) translateY(-20px) translateZ(20px);
     background: rgb(72, 72, 72);
     border: 2px solid rgb(72, 72, 72)
 }
 
 .box-bottom {
-    transform: translateX(-150px) rotateX(90deg);
+    transform: translateX(-115px) rotateX(90deg);
     background:rgb(206, 213, 188)
 }
 
