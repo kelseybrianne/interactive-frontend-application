@@ -3,6 +3,10 @@
     background-color: transparent;
 }
 
+.navbar-item img {
+    max-height: 105px;
+}
+
 .bulma-overlay-mixin {
     background-color: white;
     border-radius: 0.25em;
