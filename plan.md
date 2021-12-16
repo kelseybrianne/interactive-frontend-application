@@ -4,7 +4,7 @@ Home page describes the purpose of the application.
 
 Prompted with what type of activity, how many people, and price range.
 
-Loading screen with dad jokes displayed to the page.
+Loading screen with inspirational quotes displayed to the page.
 
 Render activity to the page.
 
