@@ -4,7 +4,8 @@
 }
 
 .navbar-item img {
-    max-height: 105px;
+    max-height: 50px;
+    /* margin-left: 10px; */
 }
 
 .bulma-overlay-mixin {
@@ -200,6 +201,7 @@ p {
     min-height: 100vh;
     background-image: url("../images/journaling.jpg");
     background-size: cover;
+    background-position: 75% 0%;
 }
 
 .tile-custom {
