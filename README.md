@@ -44,14 +44,14 @@ THEN I am provided with a journaling space to reflect on what I learned, and I a
 - jQuery UI
 - AJAX
 
-## Application Preview
-![Here is a preview of the 30 Days of Self-Exploration application.](assets/images/challenge-preview.png)
-
 ## Where To Find 30 Days of Self-Exploration
+https://kelseybrianne.github.io/self-exploration-challenge/
 
 https://github.com/kelseybrianne/self-exploration-challenge
 
-https://kelseybrianne.github.io/self-exploration-challenge/
+## Application Preview
+
+![Preview of Deployed Application](./assets/images/home-page-screenshot.png)
 
 ## Collaborators
 - Kelsey Mailau
