@@ -3,37 +3,36 @@ const textEl =document.getElementById('text');
 let quoteFade = document.getElementById("quoteAnimation")
 // Mobile menu
 let randomQuote
-$(document).ready(function () {
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function () {
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-  });
+
+// Check for click events on the navbar burger icon
+$(".navbar-burger").click(function () {
+  // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+  $(".navbar-burger").toggleClass("is-active");
+  $(".navbar-menu").toggleClass("is-active");
 });
 
-  // function to get and display quote from API 
-  function getQuote() {
-    let quoteURL = "https://type.fit/api/quotes";
-    fetch(quoteURL)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data.length);
-       randomQuote = data[Math.floor(Math.random() * data.length)];
-        console.log(randomQuote);
-      textEl.innerHTML = randomQuote.text
-      $("#quoteAnimation").fadeToggle(5000);
-      authorEl.innerHTML = "-" + "  " + randomQuote.author + "  " + "-"
-      if(randomQuote.author === null)
-        {authorEl.innerHTML = "-" + "  " + "Unknown" + "  " + "-"}
-        });
-      return randomQuote
-  }
-getQuote() 
-// funtion for timer for quotes
- setInterval(getQuote, 7000)
+// Function to fetch and render quote from API 
+function getQuote() {
+  let quoteURL = "https://type.fit/api/quotes";
+  fetch(quoteURL)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data.length);
+    randomQuote = data[Math.floor(Math.random() * data.length)];
+    console.log(randomQuote);
+    textEl.innerHTML = randomQuote.text
+    $("#quoteAnimation").fadeToggle(5000);
+    authorEl.innerHTML = "-" + "  " + randomQuote.author + "  " + "-"
+    if(randomQuote.author === null) {
+      authorEl.innerHTML = "-" + "  " + "Unknown" + "  " + "-"}
+    });
+    return randomQuote
+}
+
+// Funtion for timer for quotes
+setInterval(getQuote, 7000)
 
 
 
