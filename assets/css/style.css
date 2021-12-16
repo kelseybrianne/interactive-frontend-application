@@ -3,6 +3,11 @@
     background-color: transparent;
 }
 
+.navbar-item img {
+    max-height: 50px;
+    /* margin-left: 10px; */
+}
+
 .bulma-overlay-mixin {
     background-color: white;
     border-radius: 0.25em;
@@ -196,6 +201,7 @@ p {
     min-height: 100vh;
     background-image: url("../images/journaling.jpg");
     background-size: cover;
+    background-position: 75% 0%;
 }
 
 .tile-custom {
