@@ -29,6 +29,8 @@ WHEN I view the activity suggestion
 THEN I am given the option to go back to the main page or to be given another activity idea
 ```
 
+## Application Preview
 
+![Preview of Deployed Application](./assets/images/home-page-screenshot.png)
 
 
