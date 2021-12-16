@@ -37,11 +37,28 @@ THEN I am provided with a journaling space to reflect on what I learned, and I a
 - Bored API
 - Quotes Free API
 - Bulma 9.3
+- HTML
+- CSS
+- Javascript
+- jQuery
+- jQuery UI
+- AJAX
 
 ## Application Preview
-![Here is a preview of the 30 Days of Self-Exploration application.](./assets/images/challenge-preview.png)
+![Here is a preview of the 30 Days of Self-Exploration application.](assets/images/challenge-preview.png)
 
 ## Where To Find 30 Days of Self-Exploration
+
 https://github.com/kelseybrianne/self-exploration-challenge
 
+https://kelseybrianne.github.io/self-exploration-challenge/
 
+## Collaborators
+- Kelsey Mailau
+    - https://github.com/kelseybrianne
+- Rahwa Tefera
+    - https://github.com/rahwa1
+- Mikayla Bruce
+    - https://github.com/MikiWolfe
+- Christina Bohn
+    - https://github.com/ChristinaBohn
