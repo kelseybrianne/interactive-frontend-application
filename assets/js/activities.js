@@ -6,8 +6,6 @@ var maxPrice = 1;
 var participantsValue = "Any number"
 var activityArr = [];
 
-
-
 // Check for click events on the navbar burger icon
 $(".navbar-burger").click(function () {
 // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
