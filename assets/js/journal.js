@@ -54,7 +54,6 @@ function displayEntry(){
     $('#entry-list').append(row)
   }
 }
-
 function convertDate(d) {
   var p = d.split("/");
   return +(p[2]+p[1]+p[0]);
@@ -62,7 +61,6 @@ function convertDate(d) {
 
 function sortByDate() {
   var tbody = document.querySelector("#entry-list");
-  // get trs as array for ease of use
   var rows = [].slice.call(tbody.querySelectorAll("tr"));
   
   rows.sort(function(a,b) {
@@ -70,7 +68,7 @@ function sortByDate() {
   });
   
   rows.forEach(function(v) {
-    tbody.appendChild(v); // note that .appendChild() *moves* elements
+    tbody.appendChild(v); 
   });
 }
 
