@@ -40,10 +40,10 @@ for (var i=0; i<activityArr.length; i++) {
     $("#saved-activity").append(savedActivity);
 }
 
-$("#delete-btn").click(function() {
-    activityArr.splice()
-    console.log("clicked");
-})
+// $("#delete-btn").click(function() {
+//     activityArr.splice()
+//     console.log("clicked");
+// })
 
 // Fetch bored API data and render to page
 var fetchActivity = function(requestURL) {
