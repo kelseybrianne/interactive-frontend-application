@@ -28,7 +28,7 @@ for (var i=0; i<activityArr.length; i++) {
                 
     var savedActivity = 
     `<div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
-        <button id="#delete-btn" class="delete"></button>
+        <button id="#delete-btn" class="delete delete-btn"></button>
         <div class="card-content">
             <p class="content is-size-4 has-text-centered" style="line-height: 1.5">
                 ${savedActivities[i]} 
@@ -38,10 +38,12 @@ for (var i=0; i<activityArr.length; i++) {
     $("#saved-activity").append(savedActivity);
 }
 
-// $("#delete-btn").click(function() {
-//     activityArr.splice()
-//     console.log("clicked");
-// })
+// Function for clicking dynamic button and deleting card
+$(document).on('click', '.delete-btn', function(){
+    console.log("Dynamic button clicked. Hurray!");
+    console.log($(this).parent());
+    $(this).parent().remove();
+  });
 
 // Fetch bored API data and render to page
 var fetchActivity = function(requestURL) {
@@ -138,7 +140,7 @@ function getActivity() {
     // Remove rendered activity before rendering a new one
     $("#remove-me").remove()
 
-    var requestURL = `https://boredapi.com/api/activity?`;
+    var requestURL = `https://www.boredapi.com/api/activity?`;
 
     if(typeValue !== "Any type") {
         requestURL += `type=${typeValue}`
