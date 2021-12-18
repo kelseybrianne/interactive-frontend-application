@@ -140,7 +140,7 @@ function getActivity() {
     // Remove rendered activity before rendering a new one
     $("#remove-me").remove()
 
-    var requestURL = `https://www.boredapi.com/api/activity?`;
+    var requestURL = `https://boredapi.com/api/activity?`;
 
     if(typeValue !== "Any type") {
         requestURL += `type=${typeValue}`
