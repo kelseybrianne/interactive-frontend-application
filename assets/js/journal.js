@@ -34,6 +34,8 @@ $("#save-btn").on("click", function (event) {
 
 function displayEntry(){
   $('#entry-list').empty();
+  var email = document.getElementById("email");
+  var print = document.getElementById("printButton")
   for (let i = 0; i < storedText.length; i++) {
     let entryText = storedText[i].entry;
     let dateText = storedText[i].date;
@@ -47,5 +49,22 @@ function displayEntry(){
 
     row.append(colDate, colEntry);
     $('#entry-list').append(row)
+    console.log(entryText);
+
   }
+  email.onclick = function(){
+    let emailText = JSON.stringify(JSON.parse(localStorage.getItem("storedEntry")), null , 4);
+    window.open('mailto:test@example.com?body=' + emailText);
+  }
+
+  print.onclick = function(){
+    let printText = JSON.stringify(JSON.parse(localStorage.getItem("storedEntry")), null , 4);
+    let WinPrint = window.open('', '', 'width=900,height=650');
+    WinPrint.document.write(printText);
+    WinPrint.print();
+    WinPrint.close();
+  }
+
 }
+
+

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Exploration Journal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Exploration Journal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 </head>
+
 <body id="journal-background">
   <nav class="navbar is-transparent is-flex " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -37,34 +39,40 @@
   <div class="tile is-parent">
     <article class="tile is-child notification tile-custom">
       <h1 class="subtitle">Congratulations on completing today's activity!</h1>
-      <h2 class="subtitle">You've taken a great step on your journey in self-exploration. Use the space below to reflect on what you've learned about yourself today, and how you can use this knowledge to live to your fullest potential:</h2>
+      <h2 class="subtitle">You've taken a great step on your journey in self-exploration. Use the space below to reflect
+        on what you've learned about yourself today, and how you can use this knowledge to live to your fullest
+        potential:</h2>
       <p class="title">Date: <input type="text" id="datepicker"></p>
 
       <div class="content">
         <div class="field">
           <div class="control">
-            <textarea id="journal-entry" class="textarea is-large" placeholder="Write your journal entry here..."></textarea>
+            <textarea id="journal-entry" class="textarea is-large"
+              placeholder="Write your journal entry here..."></textarea>
             <button id="save-btn" class="button is-rounded">Save Entry</button>
           </div>
         </div>
       </div>
     </article>
   </div>
-
- <section class="section is-small">
-   <table class=" table is-striped tile-custom is-fullwidth">
-      <tr>    
-      <th>Date:</th>
-       <th>Entry:</th>
-      </tr>  
-   </table>
-  <table id ="entry-list" class="table is-striped is-fullwidth">
-    <tr id ="row"></tr>
-   </table>
+  <section class="section is-small">
+    <table class=" table is-striped tile-custom is-fullwidth">
+      <tr>
+        <th>Date:</th>
+        <th>Entry:</th>
+      </tr>
+    </table>
+    <table id="entry-list" class="table is-striped is-fullwidth">
+      <tr id="row">
+      </tr>
+    </table>
+    <button id="email" class="button is-rounded"> Email </button>
+    <button id="printButton" class="button is-rounded"> Print </button>
+    
   </section>
 
 
- 
+
   <script src="assets/js/journal.js"></script>
 
 </body>
