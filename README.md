@@ -4,6 +4,7 @@
 This application is a tool that was created to direct users in a 30-day journey of self-exploration. The app suggests daily activities based on selected parameters, it provides a link to a Myers-Briggs personality quiz, and then it gives the opportunity to reflect and journal about your experience.
 
 ## User Story
+
 ```
 AS AN individual looking for self-betterment
 I WANT to be presented with new ideas for activities that I can participate in
@@ -11,6 +12,7 @@ SO THAT I can explore my passions and try new things as part of the 30-Day Self-
 ```
 
 ## Acceptance Criteria
+
 ```
 GIVEN I want to participate in the 30 Day Self-Exploration challenge
 WHEN I view the landing page
