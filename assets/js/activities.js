@@ -38,12 +38,17 @@ for (var i=0; i<activityArr.length; i++) {
     $("#saved-activity").append(savedActivity);
 }
 
-// Function for clicking dynamic button and deleting card
-$(document).on('click', '.delete-btn', function(){
-    console.log("Dynamic button clicked. Hurray!");
-    console.log($(this).parent());
-    $(this).parent().remove();
-  });
+// Function pending for clicking dynamic button and deleting card
+// $(document).on('click', '.delete-btn', function(){
+//     console.log("Dynamic button clicked. Hurray!");
+//     console.log($(this).parent());
+//     $(this).parent().remove();
+    
+//     activityArr = activityArr.splice($(this).next().children(".content").html())
+//     console.log(activityArr);
+//     localStorage.setItem("saved-activities", JSON.stringify(activityArr))
+//     console.log($(this).next().children(".content").html())
+//   });
 
 // Fetch bored API data and render to page
 var fetchActivity = function(requestURL) {
@@ -116,7 +121,6 @@ var fetchActivity = function(requestURL) {
                 
                 var savedActivity = 
                 `<div class="card column m-5 is-one-quarter-desktop is-third-tablet saved-activity">
-                    <button id="#delete-btn" class="delete"></button>
                     <div class="card-content">
                         <p class="content is-size-4 has-text-centered" style="line-height: 1.5">
                             ${activityArr[i]} 
@@ -124,9 +128,6 @@ var fetchActivity = function(requestURL) {
                     </div>
                 </div> `
             }
-            
-
-            activityArr.splice
             
             $("#saved-activity").append(savedActivity);
             localStorage.setItem("saved-activities", JSON.stringify(activityArr))
