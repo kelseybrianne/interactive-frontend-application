@@ -39,13 +39,13 @@ THEN I am provided with a journaling space to reflect on what I learned, and I a
 - Bulma 9.3
 - HTML
 - CSS
-- Javascript
+- JavaScript
 - jQuery
 - jQuery UI
 - AJAX
 
 ## Where To Find 30 Days of Self-Exploration
-https://kelseybrianne.github.io/self-exploration-challenge/
+https://mikiwolfe.github.io/30-day-Challenge/
 
 https://github.com/kelseybrianne/self-exploration-challenge
 
